@@ -1,3 +1,20 @@
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+} 
+
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +50,7 @@
     flex: 1;
     padding: 60px;
     overflow: auto;
+    @include custom-scroll-bar;
   }
 
   .button {
